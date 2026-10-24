@@ -37,22 +37,23 @@ Create a Dessert Recipes application using Jetpack Compose. The app must be larg
   - ViewModel exposes recipe list and selected recipe detail UI state
   - Asynchronous network fetching and error/fallback state management implemented
   - Build passes
-- **Duration:** N/A
 
 ### Task_3_BuildAdaptiveUIAndScreens: Build Jetpack Compose UI with Material 3 including Recipe Grid screen, Detail screen, and adaptive List-Detail layout for phones and tablets/foldables using Coil for image loading.
-- **Status:** IN_PROGRESS
+- **Status:** COMPLETED
+- **Updates:** Task 3 complete: Created RecipeCard with Coil image loading, RecipeListScreen home screen grid view with search & offline retry banner, RecipeDetailScreen with hero image and structured ingredients & instructions, AdaptiveRecipeApp for phone single-pane and tablet/foldable dual-pane List-Detail flow, updated MainActivity. Verified with assembleDebug.
 - **Acceptance Criteria:**
   - Recipe Grid/List screen displays thumbnails and titles using Coil
   - Detail view shows hero image, ingredients list with measurements, and step-by-step cooking instructions
   - Adaptive layout renders single-pane on phones and dual-pane on foldables/tablets
   - Build passes
-- **StartTime:** 2026-10-24 15:48:08 IST
+- **Duration:** N/A
 
 ### Task_4_RunAndVerify: Build, run, and verify the application. Instruct critic_agent to verify application stability (no crashes), confirm alignment with user requirements, and report critical UI issues.
-- **Status:** PENDING
+- **Status:** IN_PROGRESS
 - **Acceptance Criteria:**
   - Make sure all existing tests pass
   - Build pass
   - App does not crash
   - Dessert recipe app runs stably with responsive layout and live/offline data
+- **StartTime:** 2026-10-24 16:52:38 IST
 
