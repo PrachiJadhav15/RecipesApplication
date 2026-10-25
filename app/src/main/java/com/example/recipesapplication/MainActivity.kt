@@ -1,5 +1,7 @@
 package com.example.recipesapplication
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,6 +15,7 @@ import androidx.compose.ui.Modifier
 import com.example.recipesapplication.ui.adaptive.AdaptiveRecipeApp
 import com.example.recipesapplication.ui.theme.RecipesApplicationTheme
 import com.example.recipesapplication.ui.viewmodel.RecipeViewModel
+import com.example.recipesapplication.util.DeepLinkUtils
 
 @Composable
 fun RecipesTheme(
@@ -33,6 +36,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        handleDeepLink(intent, viewModel)
         setContent {
             RecipesTheme {
                 Surface(
@@ -43,5 +47,22 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleDeepLink(intent, viewModel)
+    }
+
+    fun handleDeepLink(intent: Intent?, viewModel: RecipeViewModel) {
+        val recipeId = DeepLinkUtils.extractRecipeId(intent?.data)
+        if (!recipeId.isNullOrBlank()) {
+            viewModel.selectRecipe(recipeId)
+        }
+    }
+
+    fun extractRecipeId(data: Uri?): String? {
+        return DeepLinkUtils.extractRecipeId(data)
     }
 }
