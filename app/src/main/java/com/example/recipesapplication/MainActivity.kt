@@ -1,7 +1,6 @@
 package com.example.recipesapplication
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,12 +20,12 @@ import com.example.recipesapplication.util.DeepLinkUtils
 fun RecipesTheme(
     darkTheme: Boolean = androidx.compose.foundation.isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     RecipesApplicationTheme(
         darkTheme = darkTheme,
         dynamicColor = dynamicColor,
-        content = content
+        content = content,
     )
 }
 
@@ -41,7 +40,7 @@ class MainActivity : ComponentActivity() {
             RecipesTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.background,
                 ) {
                     AdaptiveRecipeApp(viewModel = viewModel)
                 }
@@ -60,9 +59,5 @@ class MainActivity : ComponentActivity() {
         if (!recipeId.isNullOrBlank()) {
             viewModel.selectRecipe(recipeId)
         }
-    }
-
-    fun extractRecipeId(data: Uri?): String? {
-        return DeepLinkUtils.extractRecipeId(data)
     }
 }

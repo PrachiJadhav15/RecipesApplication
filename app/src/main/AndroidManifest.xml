@@ -16,7 +16,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.RecipesApplication"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -24,8 +23,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <!-- Web Deep Links (HTTP and HTTPS) -->
 
             <!-- Custom URI Schemes -->
             <intent-filter>
@@ -36,21 +33,17 @@
 
                 <data android:scheme="recipe" />
             </intent-filter>
-            <intent-filter android:autoVerify="true">
+
+            <!-- Web Deep Links (HTTP and HTTPS) -->
+            <intent-filter
+                android:autoVerify="true"
+                tools:ignore="AppLinksAutoVerify,UnusedAttribute">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="http" />
-                <data android:host="com.example.recipes" />
-            </intent-filter>
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
                 <data android:scheme="https" />
                 <data android:host="com.example.recipes" />
             </intent-filter>

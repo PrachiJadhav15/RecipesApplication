@@ -19,8 +19,8 @@ object SampleData {
                 Ingredient("Egg Yolks", "2 large"),
                 Ingredient("Caster Sugar", "100g"),
                 Ingredient("All-purpose Flour", "50g"),
-                Ingredient("Cocoa Powder", "1 tbsp for dusting")
-            )
+                Ingredient("Cocoa Powder", "1 tbsp for dusting"),
+            ),
         ),
         Recipe(
             id = "52906",
@@ -36,8 +36,8 @@ object SampleData {
                 Ingredient("Sugar", "100g"),
                 Ingredient("Strong Espresso Coffee", "300ml"),
                 Ingredient("Coffee Liqueur / Kahlua", "2 tbsp"),
-                Ingredient("Unsweetened Cocoa Powder", "2 tbsp")
-            )
+                Ingredient("Unsweetened Cocoa Powder", "2 tbsp"),
+            ),
         ),
         Recipe(
             id = "52857",
@@ -54,8 +54,8 @@ object SampleData {
                 Ingredient("Eggs", "3 large"),
                 Ingredient("Vanilla Extract", "1 tsp"),
                 Ingredient("Fresh Strawberries", "300g"),
-                Ingredient("Lemon Juice", "1 tbsp")
-            )
+                Ingredient("Lemon Juice", "1 tbsp"),
+            ),
         ),
         Recipe(
             id = "52893",
@@ -72,8 +72,8 @@ object SampleData {
                 Ingredient("Ground Nutmeg", "1/4 tsp"),
                 Ingredient("All-purpose Flour", "2 tbsp"),
                 Ingredient("Lemon Juice", "1 tbsp"),
-                Ingredient("Egg Wash", "1 egg beaten with 1 tbsp water")
-            )
+                Ingredient("Egg Wash", "1 egg beaten with 1 tbsp water"),
+            ),
         ),
         Recipe(
             id = "52900",
@@ -88,8 +88,8 @@ object SampleData {
                 Ingredient("Egg Whites", "2 large room temp"),
                 Ingredient("Granulated Sugar", "50g"),
                 Ingredient("Food Coloring Gel", "a few drops"),
-                Ingredient("Chocolate Ganache / Buttercream", "150g for filling")
-            )
+                Ingredient("Chocolate Ganache / Buttercream", "150g for filling"),
+            ),
         ),
         Recipe(
             id = "52928",
@@ -106,8 +106,8 @@ object SampleData {
                 Ingredient("Granulated Sugar", "2 tbsp + 100g for coating"),
                 Ingredient("Ground Cinnamon", "1 tbsp"),
                 Ingredient("Vegetable Oil", "for deep frying"),
-                Ingredient("Dark Chocolate", "100g for sauce")
-            )
-        )
+                Ingredient("Dark Chocolate", "100g for sauce"),
+            ),
+        ),
     )
 }
