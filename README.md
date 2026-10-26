@@ -5,6 +5,7 @@
 2. **Detailed Recipe View**: View full recipe details including a large hero image, precise ingredients list with measurements, and step-by-step cooking instructions.
 3. **Adaptive List-Detail Layout**: Dynamically adapt screen layouts using a single pane on phones and a dual-pane List-Detail view on foldables and tablets.
 4. **Offline Local Fallback**: Automatically fall back to local repository sample data when offline or network connectivity is unavailable.
+5. **Deeplink implementation**: Launch and opens a specific recipe of this app using weblink and custom link
 
 ## High-Level Tech Stack
 - **Language**: Kotlin
