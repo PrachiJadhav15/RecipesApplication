@@ -60,7 +60,7 @@ class DeepLinkInstrumentedTest {
     fun testMainActivityHandleDeepLink() {
         val scenario = ActivityScenario.launch(MainActivity::class.java)
         scenario.onActivity { activity ->
-            val viewModel = RecipeViewModel()
+            val viewModel = RecipeViewModel(com.example.recipesapplication.data.repository.RecipeRepositoryImpl(com.example.recipesapplication.data.remote.RetrofitClient.instance))
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://com.example.recipes?id=52893"))
 
             activity.handleDeepLink(intent, viewModel)

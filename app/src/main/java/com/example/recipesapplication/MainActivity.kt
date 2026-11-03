@@ -11,10 +11,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.recipesapplication.ui.adaptive.AdaptiveRecipeApp
 import com.example.recipesapplication.ui.theme.RecipesApplicationTheme
 import com.example.recipesapplication.ui.viewmodel.RecipeViewModel
 import com.example.recipesapplication.util.DeepLinkUtils
+import dagger.hilt.android.AndroidEntryPoint
 
 @Composable
 fun RecipesTheme(
@@ -29,6 +31,7 @@ fun RecipesTheme(
     )
 }
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val viewModel: RecipeViewModel by viewModels()
 
@@ -37,6 +40,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         handleDeepLink(intent, viewModel)
         setContent {
+            val viewModel: RecipeViewModel = hiltViewModel()
             RecipesTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),

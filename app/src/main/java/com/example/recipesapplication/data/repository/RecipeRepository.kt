@@ -3,8 +3,8 @@ package com.example.recipesapplication.data.repository
 import com.example.recipesapplication.data.local.SampleData
 import com.example.recipesapplication.data.model.Recipe
 import com.example.recipesapplication.data.remote.MealApiService
-import com.example.recipesapplication.data.remote.RetrofitClient
 import com.example.recipesapplication.data.remote.dto.toDomain
+import javax.inject.Inject
 
 interface RecipeRepository {
     suspend fun getDessertRecipes(): Result<List<Recipe>>
@@ -12,8 +12,8 @@ interface RecipeRepository {
     suspend fun searchRecipes(query: String): Result<List<Recipe>>
 }
 
-class RecipeRepositoryImpl(
-    private val apiService: MealApiService = RetrofitClient.instance
+class RecipeRepositoryImpl @Inject constructor(
+    private val apiService: MealApiService
 ) : RecipeRepository {
 
     override suspend fun getDessertRecipes(): Result<List<Recipe>> {
